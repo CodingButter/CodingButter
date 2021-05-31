@@ -4,7 +4,13 @@ import { InfoSec,InfoRow,InfoColumn,TextWrapper,TopLine,Heading,Subtitle } from 
 import { Container,Button } from "../../globalStyles"
 
 
-function InfoSection({primary,lightBg,imgStart,lightTopLine,lightTextDesc,lightText,topLine,headline,buttonLabel,description}) {
+function InfoSection(
+    {
+        primary,lightBg,imgStart,
+        lightTopLine,lightTextDesc,lightText,
+        topLine,headline,buttonLabel,description,backgroundVideo
+    }) {
+
     return (
         <>
             <InfoSec lightBg={lightBg}>

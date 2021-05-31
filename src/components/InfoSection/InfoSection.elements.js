@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const InfoSec = styled.div`
+    position:relative;
     color:#fff;
     padding:16px 0;
     background:${({lightBg})=>(lightBg?'#fff':'#101522')};
+
 `
 
 export const InfoRow = styled.div`
@@ -63,4 +65,4 @@ export const Subtitle = styled.p`
     
     color:${({ lightTextDesc }) => (lightTextDesc ? '#a9b3c1' : '#1c2237')};
 `
- 
+
