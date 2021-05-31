@@ -1,6 +1,5 @@
-import CodeBackgroundVideo  from "../../public/videos/Code.mp4"
+
 export const homeObjOne = {
-    //backgroundVideo:CodeBackgroundVideo,
     lightBg: false,
     primary:true,
     lightBg:false,
@@ -11,5 +10,24 @@ export const homeObjOne = {
     topLine:"[...Love,...Knowledge]",
     headline:"Coding Smooth as Butter",
     buttonLabel:"Get Started",
-    description:"We take your projects from a concept to code!"
+    description:"We take your projects from a concept to code!",
+    start:"",
+    alt:"image",
+    img:require('../../public/images/pwa.svg')
+}
+export const homeObjTwo = {
+    lightBg: true,
+    primary:false,
+    lightBg:false,
+    imgStart:false,
+    lightTopLine:false,
+    lightTextDesc:false,
+    lightText:false,
+    topLine:"[...Love,...Knowledge]",
+    headline:"Coding Smooth as Butter",
+    buttonLabel:"Get Started",
+    description:"We take your projects from a concept to code!",
+    start:"",
+    alt:"image",
+    img:require('../../public/images/pwa.svg')
 }
