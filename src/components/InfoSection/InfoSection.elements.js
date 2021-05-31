@@ -66,7 +66,7 @@ export const Subtitle = styled.p`
     color:${({ lightTextDesc }) => (lightTextDesc ? '#a9b3c1' : '#1c2237')};
 `
 export const ImgWrapper = styled.div`
-    width:555px;
+    max-width:555px;
     display:flex;
     justify-content:${({start})=>(start?'flex-start':'flex-end')};
 `

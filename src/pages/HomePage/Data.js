@@ -2,7 +2,6 @@
 export const homeObjOne = {
     lightBg: false,
     primary:true,
-    lightBg:false,
     imgStart:true,
     lightTopLine:true,
     lightTextDesc:true,
@@ -18,7 +17,6 @@ export const homeObjOne = {
 export const homeObjTwo = {
     lightBg: true,
     primary:false,
-    lightBg:false,
     imgStart:false,
     lightTopLine:false,
     lightTextDesc:false,
