@@ -11,7 +11,7 @@ function InfoSection(
         topLine,headline,buttonLabel,description,
         img,start,alt
     }) {
-        console.log(img)
+        console.log(img.default)
     return (
         <>
             <InfoSec lightBg={lightBg}>
@@ -31,7 +31,7 @@ function InfoSection(
                         </InfoColumn>
                         <InfoColumn>
                             <ImgWrapper start={start}>
-                                <Img src={img} alt={alt}/>
+                                <Img alt={alt} src={img.default}/>
                             </ImgWrapper>
                         </InfoColumn>
                     </InfoRow>
