@@ -1,17 +1,17 @@
 import "./styles.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import GlobalStyle from "./globalStyles";
 import { Navbar } from "./components"
-import Home from "./pages/Home";
+import Home from "./pages/HomePage/Home";
 
 export default function App() {
   return (
     <Router>
-        <Navbar/>
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+      <GlobalStyle/>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home}/>
+      </Switch>
     </Router>
   );
 
