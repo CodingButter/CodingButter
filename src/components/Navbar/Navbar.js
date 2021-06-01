@@ -3,6 +3,7 @@ import { Nav, NavbarContainer, NavLogo, NavIcon, NavMenu,NavItem,NavLink,MobileI
 import { FaTimes, FaBars } from "react-icons/fa"
 import { IconContext } from "react-icons/lib";
 import { Button } from '../../globalStyles';
+const logoImage = require('../../public/images/logo.jpg')
 const Navbar = () => {
     const [ click, setClick ] = useState(false);
     const [button, setButton] = useState(true);
@@ -28,7 +29,7 @@ const Navbar = () => {
                 <Nav>
                     <NavbarContainer>
                         <NavLogo to="/">
-                            <NavIcon />
+                            <NavIcon src={logoImage.default} />
                             CodingButter
                         </NavLogo>
                         <MobileIcon onClick={handleClick}>
@@ -53,12 +54,12 @@ const Navbar = () => {
                             <NavItemBtn>
                                 {button ? (
                                     <NavBtnLink to="/sign-up">
-                                        <Button primary>SIGN UP</Button>
+                                        <Button primary>Consultation</Button>
                                     </NavBtnLink>
                                 ) : (
                                     <NavBtnLink to="/sign-up">
                                         <Button fontBig primary>
-                                                SIGN UP
+                                                Schedule A Consultation
                                         </Button>
                                     </NavBtnLink>
                                 )
