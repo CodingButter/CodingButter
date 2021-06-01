@@ -26,7 +26,7 @@ function InfoSection({
   buttonLabel,
   description,
   imgPath,
-  videoPath,
+  videoPaths,
   shadow,
   start,
   alt,
@@ -35,7 +35,11 @@ function InfoSection({
   return (
     <>
       <InfoSec lightBg={lightBg}>
-        {videoPath ? <HeroBanner shadow={shadow} videoPath={videoPath} /> : ""}
+        {videoPaths ? (
+          <HeroBanner shadow={shadow} videoPaths={videoPaths} />
+        ) : (
+          ""
+        )}
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>

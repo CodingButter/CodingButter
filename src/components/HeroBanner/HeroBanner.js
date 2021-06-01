@@ -5,11 +5,13 @@ import {
   HeroBannerVideo,
 } from "./HeroBanner.elements";
 
-const HeroBanner = ({ videoPath, shadow }) => {
+const HeroBanner = ({ videoPaths, shadow }) => {
   return (
     <HeroBannerContainer shadow={shadow}>
       <HeroBannerVideo preload='auto' autoPlay={true} muted loop={true}>
-        <source src={videoPath} />
+        {videoPaths.map((videoPath, videoPathKey) => (
+          <source key={videoPathKey} src={videoPath} />
+        ))}
       </HeroBannerVideo>
     </HeroBannerContainer>
   );

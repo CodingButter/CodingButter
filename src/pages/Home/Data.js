@@ -1,5 +1,6 @@
 import pwaImage from "../../public/images/pwa.svg";
-import codeHero from "../../public/videos/Code.webm";
+import codeHeroW from "../../public/videos/Code.webm";
+import codeHeroM from "../../public/videos/Code.mp4";
 console.log(pwaImage);
 export const homeObjOne = {
   lightBg: true,
@@ -15,7 +16,7 @@ export const homeObjOne = {
   start: "",
   alt: "image",
   imgPath: pwaImage,
-  videoPath: codeHero,
+  videoPaths: [codeHeroW, codeHeroM],
   shadow: 0.7,
 };
 
