@@ -52,6 +52,16 @@ const Footer = () => {
                     </FooterLinksItems>
                 </FooterLinksWrapper>
             </FooterLinksContainer>
+            <SocialMedia>
+                <SocialMediaWrap>
+                    <SocialMediaLogo to="/">
+                        <SocialMediaIcon>
+                            CodingButter
+                        </SocialMediaIcon>
+                        <Websiterights>CodingButter © 2021</Websiterights>
+                    </SocialMediaLogo>
+                </SocialMediaWrap>
+            </SocialMedia>
         </FooterContainer>
     )
 }
