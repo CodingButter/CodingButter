@@ -1,4 +1,4 @@
-
+const pwaImage = require('../../public/images/pwa.svg')
 export const homeObjOne = {
     lightBg: false,
     primary:true,
@@ -12,7 +12,7 @@ export const homeObjOne = {
     description:"We take your projects from a concept to code!",
     start:"",
     alt:"image",
-    img:require('../../public/images/pwa.svg')
+    imgPath:pwaImage.default
 }
 export const homeObjTwo = {
     lightBg: true,
@@ -27,5 +27,10 @@ export const homeObjTwo = {
     description:"We take your projects from a concept to code!",
     start:"",
     alt:"image",
-    img:require('../../public/images/pwa.svg')
+    imgPath:pwaImage.default
 }
+
+export const dataSections = [
+    homeObjOne,
+    homeObjTwo
+]

@@ -9,9 +9,8 @@ function InfoSection(
         primary,lightBg,imgStart,
         lightTopLine,lightTextDesc,lightText,
         topLine,headline,buttonLabel,description,
-        img,start,alt
+        imgPath,start,alt,sectionLink
     }) {
-        console.log(img.default)
     return (
         <>
             <InfoSec lightBg={lightBg}>
@@ -22,7 +21,7 @@ function InfoSection(
                                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                                <Link to='/sign-up'>
+                                <Link to={sectionLink || '/'}>
                                     <Button big fontBig primary={primary}>
                                         {buttonLabel}
                                     </Button>
@@ -31,7 +30,7 @@ function InfoSection(
                         </InfoColumn>
                         <InfoColumn>
                             <ImgWrapper start={start}>
-                                <Img alt={alt} src={img.default}/>
+                                <Img alt={alt} src={imgPath}/>
                             </ImgWrapper>
                         </InfoColumn>
                     </InfoRow>

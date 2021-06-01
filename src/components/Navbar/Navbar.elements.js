@@ -72,7 +72,7 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
     height:80px;
     border-bottom:2px solid transparent;
-
+    width:100%;
     &:hover {
         border:none;
     }
@@ -115,7 +115,7 @@ export const NavBtnLink = styled(Link)`
     text-decoration:none;
     padding:8px 16px;
     height:100%;
-    height:100%;
+    width:100%;
     border:none;
     outline:none;
 `
