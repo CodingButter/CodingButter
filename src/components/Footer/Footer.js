@@ -1,5 +1,6 @@
 import React from 'react'
-import {FooterContainer,FooterSubscription,FooterSubHeader,FooterSubText} from "./Footer.elements"
+import {FooterContainer,FooterSubscription,FooterSubHeader,FooterSubText,Form,FormInput} from "./Footer.elements"
+import {Button} from "../../globalStyles"
 const Footer = () => {
     return (
         <FooterContainer>
@@ -10,6 +11,10 @@ const Footer = () => {
                 <FooterSubText>
                     You can unsubscribe at any time.
                 </FooterSubText>
+                <Form>
+                    <FormInput name="email" type="email" placeholder="Your Email"/>
+                    <Button fontBig>Subscribe</Button>
+                </Form>
             </FooterSubscription>
         </FooterContainer>
     )
