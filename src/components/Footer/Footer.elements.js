@@ -71,8 +71,9 @@ export const FooterLinksContainer = styled.div`
 export const FooterLinksWrapper = styled.div`
     display:flex;
 
-    @media screen and (max-width:820px){
+    @media screen and (max-width:550px){
         flex-direction:column;
+        font-size:1.5rem;
     }
 `
 
@@ -82,7 +83,7 @@ export const FooterLinksItems = styled.div`
     align-items:flex-start;
     margin:16px;
     text-align:left;
-    width:160px;
+    min-width:160px;
     box-sizing:border-box;
     color:#fff;
 
@@ -107,3 +108,54 @@ export const FooterLink = styled(Link)`
         transition:0.3s ease-out;
     }
 `
+export const SocialMedia = styled.section`
+    max-width:1000px;
+    width:100%;
+`
+
+export const SocialMediaWrap = styled.div`
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:90%;
+    max-width:1000px;
+    margin:40px auto 0 auto;
+
+    @media screen and (max-width:820px){
+        flex-direction:column;
+    }
+`
+
+export const SocialMediaLogo = styled(Link)`
+    color:#fff;
+    justify-self:start;
+    cursor:pointer;
+    text-decoration:none;
+    font-size:2rem;
+    display:flex;
+    align-items:center;
+    margin-bottom:16px;
+`
+export const SocialMediaIcon = styled.img`
+    margin-right:10px;
+    border-radius:50%;
+    height:50px;
+`
+
+export const WebsiteRights = styled.small`
+    color:#fff;
+    margin-bottom:16px;
+`
+
+export const SocialMediaIcons = styled.div`
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:240px;
+`
+
+export const SocialMediaIconLink = styled.a`
+    color:#fff;
+    font-size:24px;
+`
+

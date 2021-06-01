@@ -3,7 +3,7 @@ import { Nav, NavbarContainer, NavLogo, NavIcon, NavMenu,NavItem,NavLink,MobileI
 import { FaTimes, FaBars } from "react-icons/fa"
 import { IconContext } from "react-icons/lib";
 import { Button } from '../../globalStyles';
-const logoImage = require('../../public/images/logo.jpg')
+import { logoImage } from "../../globalData"
 const Navbar = () => {
     const [ click, setClick ] = useState(false);
     const [button, setButton] = useState(true);

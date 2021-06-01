@@ -1,6 +1,11 @@
 import React from 'react'
-import {FooterContainer,FooterSubscription,FooterSubHeader,FooterSubText,Form,FormInput,FooterLinksContainer,FooterLinksWrapper,FooterLinksItems,FooterLink,FooterLinkTitle} from "./Footer.elements"
+import {FooterContainer,FooterSubscription,FooterSubHeader,FooterSubText,
+    Form,FormInput,FooterLinksContainer,FooterLinksWrapper,FooterLinksItems,
+    FooterLink,FooterLinkTitle,SocialMedia,SocialMediaWrap,
+    SocialMediaLogo,WebsiteRights,SocialMediaIcons,SocialMediaIcon,SocialMediaIconLink} from "./Footer.elements"
 import {Button} from "../../globalStyles"
+import {logoImage,allSocialMediaLinks} from '../../globalData'
+
 const Footer = () => {
     return (
         <FooterContainer>
@@ -34,32 +39,24 @@ const Footer = () => {
                         <FooterLink to='/investors'>Investors</FooterLink>
                         <FooterLink to='/tos'>Terms of Service</FooterLink>
                     </FooterLinksItems>
-                    <FooterLinksItems>  
-                        <FooterLinkTitle>Videos</FooterLinkTitle>
-                        <FooterLink to='/consultation'>Schedule a Consultation</FooterLink>
-                        <FooterLink to='/current-projects'>Current Projects</FooterLink>
-                        <FooterLink to='/testimonials'>Testimonials</FooterLink>
-                        <FooterLink to='/investors'>Investors</FooterLink>
-                        <FooterLink to='/tos'>Terms of Service</FooterLink>
-                    </FooterLinksItems>
-                    <FooterLinksItems>  
-                        <FooterLinkTitle>Social Media</FooterLinkTitle>
-                        <FooterLink to='/consultation'>Schedule a Consultation</FooterLink>
-                        <FooterLink to='/current-projects'>Current Projects</FooterLink>
-                        <FooterLink to='/testimonials'>Testimonials</FooterLink>
-                        <FooterLink to='/investors'>Investors</FooterLink>
-                        <FooterLink to='/tos'>Terms of Service</FooterLink>
-                    </FooterLinksItems>
                 </FooterLinksWrapper>
             </FooterLinksContainer>
             <SocialMedia>
                 <SocialMediaWrap>
                     <SocialMediaLogo to="/">
-                        <SocialMediaIcon>
-                            CodingButter
-                        </SocialMediaIcon>
-                        <Websiterights>CodingButter © 2021</Websiterights>
+                        <SocialMediaIcon src={logoImage.default}/>
+                        CodingButter
                     </SocialMediaLogo>
+                    <WebsiteRights>CodingButter © 2021</WebsiteRights>
+                    <SocialMediaIcons>
+                        {
+                            allSocialMediaLinks.map(({site,url,faIcon},socialMediaLinkKey)=>(
+                                <SocialMediaIconLink href={url} target="_blank" aria-label={site} key={socialMediaLinkKey}>
+                                    {faIcon()}
+                                </SocialMediaIconLink>
+                            ))
+                        }
+                    </SocialMediaIcons>
                 </SocialMediaWrap>
             </SocialMedia>
         </FooterContainer>
