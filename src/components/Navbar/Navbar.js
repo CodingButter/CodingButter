@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
   Nav,
   NavbarContainer,
@@ -10,15 +10,17 @@ import {
   MobileIcon,
   NavBtnLink,
   NavItemBtn,
+  LiveStatusIcon
 } from "./Navbar.elements";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
 import { logoImage } from "../../globalData";
+import { TwitchContext } from "../../hook/UseTwitchContext"
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
+  const twitchData = useContext(TwitchContext)
   const handleClick = () => {
     setClick(!click);
   };
@@ -41,8 +43,14 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to='/'>
+            <NavLogo to="/">
               <NavIcon src={logoImage.default} />
+              <LiveStatusIcon status={twitchData.status} >
+                {
+                  twitchData.stream &&
+                  <div>{twitchData.stream.viewer_count}</div>
+                }
+              </LiveStatusIcon>
               CodingButter
             </NavLogo>
             <MobileIcon onClick={handleClick}>
@@ -50,21 +58,21 @@ const Navbar = () => {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLink to='/'>Home</NavLink>
+                <NavLink to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to='/services'>Services</NavLink>
+                <NavLink to="/services">Services</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to='/products'>Products</NavLink>
+                <NavLink to="/products">Products</NavLink>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to='/consultation'>
+                  <NavBtnLink to="/consultation">
                     <Button primary>Consultation</Button>
                   </NavBtnLink>
                 ) : (
-                  <NavBtnLink to='/consultation'>
+                  <NavBtnLink to="/consultation">
                     <Button fontBig primary>
                       Schedule A Consultation
                     </Button>

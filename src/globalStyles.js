@@ -7,6 +7,9 @@ const GlobalStyle = createGlobalStyle`
         padding:0;
         font-family:'Source Sans Pro', sans-serif;
     }
+    :root{
+
+    }
 `;
 
 export const Container = styled.div`
@@ -23,6 +26,13 @@ export const Container = styled.div`
     padding-left: 30px;
   }
 `;
+
+export const Card = styled.div`
+  background: #101522;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 40%);
+  color: white;
+`
 
 export const Button = styled.button`
   border-radius: 4px;

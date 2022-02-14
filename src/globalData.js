@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 export const logoImage = require("./public/images/logo.jpg");
+export const CarouselBanner = require("./public/images/carousel-banner.png")
 export const allSocialMediaLinks = [
   {
     site: "Facebook",

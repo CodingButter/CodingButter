@@ -33,6 +33,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
   height: 100%;
   padding: 15px;
+  position:relative;
 `;
 
 export const NavIcon = styled.img`
@@ -40,6 +41,24 @@ export const NavIcon = styled.img`
   border-radius: 50%;
   height: 100%;
 `;
+
+export const LiveStatusIcon = styled.div`
+    background-color: ${({ status }) => (status == "live" ? "#eb0400" : "black")};
+    border-radius: 50%;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+    padding: 3px;
+    width:10px;
+    height:10px;
+    &>div{
+      font-size: 0.4em;
+      position: absolute;
+      left: 13px;
+      top: -2px;
+  }
+`;
+
 export const MobileIcon = styled.div`
   display: none;
 
@@ -73,6 +92,7 @@ export const NavMenu = styled.ul`
     background: #101522;
   }
 `;
+
 export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
