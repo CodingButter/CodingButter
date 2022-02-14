@@ -4,14 +4,30 @@ import { dataSections } from "./Data";
 import { TwitchContext } from "../../hook/UseTwitchContext"
 import Carousel from "../../components/Carousel/Carousel"
 import Video from "../../components/Video/Video"
+import { FullImage } from "../../globalStyles";
+
 const Home = () => {
-  const { streamclips } = useContext(TwitchContext);
-  console.log(streamclips)
+  const { streamclips, schedule } = useContext(TwitchContext);
+  console.log(schedule)
   return (
     <>
       <InfoSection {...dataSections[0]} key={"Banner"} />
-      <Carousel>
-        {streamclips.map((clip, index) => <Video url={clip.embed_url} data-title={clip.title} key={index}>{index}</Video>)}
+      <Carousel sizeDecay={10} contents={streamclips.map((clip, index) => {
+        return {
+          active: {
+            component: Video,
+            props: {
+              id: clip.id
+            }
+          },
+          inactive: {
+            component: FullImage,
+            props: {
+              src: clip.thumbnail_url
+            }
+          }
+        }
+      })}>
       </Carousel>
     </>
   );

@@ -8,9 +8,19 @@ display:flex;
 flex-direction:row;
 max-width:100%;
 align-items:center;
-background:#f0f786;
+background:#15475b;
 background-size:cover;
+overflow:hidden;
 `
+export const CardButtonContainer = styled(Container)`
+      width:70%;
+      height:100%;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      min-width:600px;
+`
+
 export const CardsContainer = styled(Container)`
       width:30%;
       height:100%;
@@ -31,13 +41,17 @@ export const CarouselButton = styled(Button)`
             color:#707070;
             background-color:rgba(0,0,0,.2);
       }
-      & svg{
-            padding-left:${({ direction }) => direction == "forward" ? "" : "-"}7px;
+      &>svg{
+            ${({ direction }) => direction == "forward" ? "padding-left:7" : "padding-right:7"}px;
+      }
+      @media screen and (max-width: 950px) {
+            display: none;
       }
 `
 
 
 export const CarouselCard = styled(Card)`
+overflow:hidden;
 transition: 1s;
 position:absolute;
 z-index:${({ depth, sideCards }) => sideCards - depth};
@@ -50,13 +64,8 @@ transform:scale(${({ depth, sideCards, sizeDecay }) => {
             const size = 100 - (depth / sideCards) * sizeDecay
             return size
       }}%) translate(-50%, -50%);
-display:${({ depth, sideCards }) => depth > sideCards + 1 ? "none" : "block"};
 opacity:${({ depth, sideCards }) => depth > sideCards ? 0 : 1};
 transform-origin:0 0;
 width:450px;
 height:275px;
-@media screen and (max-width: 950px) {
-      width: 300px;
-}
-
 ` 

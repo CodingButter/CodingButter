@@ -6,9 +6,7 @@ const GlobalStyle = createGlobalStyle`
         margin:0;
         padding:0;
         font-family:'Source Sans Pro', sans-serif;
-    }
-    :root{
-
+        -webkit-user-drag: none;
     }
 `;
 
@@ -33,7 +31,10 @@ export const Card = styled.div`
   box-shadow: 0 0 5px 5px rgb(0 0 0 / 40%);
   color: white;
 `
-
+export const FullImage = styled.img`
+  width:100%;
+  height:100%;
+`
 export const Button = styled.button`
   border-radius: 4px;
   background: ${({ primary }) => (primary ? "#4b59f7" : "#0467FB")};
