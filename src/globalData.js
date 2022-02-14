@@ -21,7 +21,7 @@ export const allSocialMediaLinks = [
   },
   {
     site: "Instagram",
-    url: "https://instagram.com/codingbutter",
+    url: "https://www.instagram.com/codingbutter",
     faIcon: () => <FaInstagram />,
   },
   {
