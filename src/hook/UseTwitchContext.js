@@ -1,5 +1,5 @@
 import { useState, createContext, useEffect } from "react";
-const twitchButterEndoint = process.env.NODE_ENV == "production" ? "http://server.codingbutter.com/apis/twitch/" : "http://localhost:3000/apis/twitch/";
+const twitchButterEndoint = process.env.NODE_ENV == "production" ? "https://server.codingbutter.com/apis/twitch/" : "http://localhost:3000/apis/twitch/";
 const dataToGrab = { "status": "", "stream": {}, "schedule": [], "streamclips": [] };
 const dataToGrabKeys = Object.keys(dataToGrab)
 const getEnpointData = async (endpoint) => {
